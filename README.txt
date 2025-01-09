@@ -45,16 +45,21 @@ Simply_Scheme_2e_Book_Files
 │   ├── spread.scm
 │   └── ttt.scm
 ├── simply.scm
+├── simply2.scm
 ├── spread.scm
 └── ttt.scm
 
-2 directories, 17 files
+2 directories, 18 files
 
 I suspect that as I learn more I'll build a site specific module for
 my Scheme(s). I'm currently using Guile but will shift to Chez Scheme
 if needed. Loading the `simply.scm' file from either ~/.guile or
 during Emacs/Geiser initialization is needed to work through the text.
 
+2025-01-09 -- using simply2.scm in place of simply.scm. I found it
+              on another site for the text and it is formatted more
+              clearly, and had one reordering of a (let ()).
+	      
 Troy Brumley, blametroi@gmail.com, January 2025.
 
 So let it be written,
