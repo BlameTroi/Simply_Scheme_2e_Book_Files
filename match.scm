@@ -1,4 +1,15 @@
-define (match pattern sent)
+;; I have not found a version of this that works, and I've
+;; looked a good bit. In Racket #lang simply-scheme and
+;; Chicken with "simply.scm" loaded this always fails to
+;; match anything. The result is always '() no matter
+;; the match attempt. That's a false in Lisp, iirc, but
+;; not in Scheme.
+;;
+;; If I get a reasonable fixup working as I work chapter
+;; 16 I'll add it here, but I want to do my best to keep
+;; the original code from the text intact.
+
+(define (match pattern sent)
   (match-using-known-values pattern sent '()))
 
 (define (match-using-known-values pattern sent known-values)

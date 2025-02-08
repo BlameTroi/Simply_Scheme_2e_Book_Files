@@ -1,9 +1,9 @@
 		     ===========================
-			 Supporting Files for
-			    Simply Scheme:
+			     Supporting Files for
+			        Simply Scheme:
 		     Introducing Computer Science
-				 2/e
-			Copyright (C) 1999 MIT
+				        2/e
+			   Copyright (C) 1999 MIT
 		     ===========================
 
 These directories hold supporting files for the textbook...
@@ -42,7 +42,8 @@ Simply_Scheme_2e_Book_Files
 ├── README.txt
 ├── database.scm
 ├── functions.scm
-├── match.scm
+├── match.scm      <---- does not work 
+├── newttt.scm
 ├── originals
 │   ├── database.scm
 │   ├── functions.scm
@@ -51,14 +52,14 @@ Simply_Scheme_2e_Book_Files
 │   ├── spread.scm
 │   └── ttt.scm
 ├── required.scm   <---- cap to load environemnt into chicken
+├── required.rkt   <---- cap to load environemnt into racket
 ├── simply.scm
 ├── spread.scm
 └── ttt.scm
 
-2 directories, 17 files
+2 directories, 19 files
 	      
 Troy Brumley, blametroi@gmail.com, January 2025.
 
 So let it be written,
 So let it be done.
-

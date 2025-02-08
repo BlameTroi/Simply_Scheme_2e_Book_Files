@@ -1,7 +1,11 @@
-;;; required.scm -- standard environment setup for _Simply_Scheme_
+#lang simply-scheme
 
-;; If you are Racket, see file "required.rkt". The setup is a bit
-;; simpler, not that this is complex.
+;;; required.rkt -- standard environment setup for _Simply_Scheme_
+
+;; If you are using R5RS Scheme such as Chicken 5, see file 
+;; "required.scm". This file is a rework of that file for Racket,
+;; but all you really need is to set the language to simply-scheme,
+;; but are more details:
 
 ;;; Commentary:
 
@@ -9,21 +13,21 @@
 ;; projects. The standard abstractions are a consistent requirement as
 ;; you work through the text.
 ;;
-;; If you are using an R5RS Scheme, review this file and then load
-;; it into that Scheme.
+;; If you are using Racket, this is accomplished by setting the
+;; langauge to simply-scheme. I prefer to do this in source as
+;; "#lang simply-scheme". This language and the language for SICP are
+;; not installed by default, Use the Racket package manager to install
+;; them.
 ;;
 ;; I have found it helpful to load a couple of other libraries.
 ;;
 ;; Troy Brumley -- blametroi@gmail.com -- Feburary 2025.
 
+
 ;;; Environment Requirements:
 
 ;; An R5RS Scheme, such as Chicken, and the "simply.scm" file are
 ;; all you need.
-
-;; I've only tried Chez, Guile, and Chicken. The first two don't work.
-;; Chicken 5 supports the Scheme langauge as in R5RS which was the
-;; active standard when _Simply_Scheme_ was published.
 
 
 ;;; Code:
@@ -36,14 +40,6 @@
 
 ;;; Additional environment setup:
 
-;; Chicken makes many packages available via their "chicken-install". I
-;; use two regularly: srfi-78 for testing, and trace for a simple
-;; execution trace.
-;;
-;; I don't know the correct commands to grab these for other Scheme
-;; implementations.
-
-
 ;;; srfi-78 -- extremely lightweight testing:
 
 ;; My personal style of development is to have many small tests. The
@@ -51,18 +47,21 @@
 ;; for any real setup. This gives enough "test first" goodness without
 ;; significant overhead. It can be as simple as "(check (some
 ;; function) => expected result)"
+;;
+;; This srfi appears to be one of those installed by default in Racket.
 
-(import srfi-78)
+(require srfi/78)
 
 
 ;;; trace -- runtime tracing:
 
 ;; Around chapter 13 the authors begin to expose details of recursion
-;; and they use trace to do so. The Chicken trace is pretty simple and
-;; after loading the text's directions just work for tracing in the
-;; repl.
-
-(import trace)
+;; and they use trace to do so. A trace function matching the one
+;; described in the text is part of the simply-scheme langauge, so
+;; all you need to do turn tracing of a procedure on or off:
+;;
+;; (trace procedure)
+;; (untrace procedure)
 
 
 ;;; Examples and projects:
@@ -84,4 +83,4 @@
 ;; (load "newttt.scm") ;; another version from the author's site.
 ;; (load "database.scm")
 
-;;; required.scm ends here.
+;;; required.rkt ends here.
