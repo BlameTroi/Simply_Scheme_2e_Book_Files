@@ -1,13 +1,16 @@
-;; I have not found a version of this that works, and I've
-;; looked a good bit. In Racket #lang simply-scheme and
-;; Chicken with "simply.scm" loaded this always fails to
-;; match anything. The result is always '() no matter
-;; the match attempt. That's a false in Lisp, iirc, but
-;; not in Scheme.
+;; I originally thought this did not work. I was wrong. My
+;; mistake was in not noticing the transition in the text
+;; from boolean returns to the '() or 'failed. The '() is
+;; a sentence that comes back empty if the match passed,
+;; but will contain captured text if that feature (from
+;; later in the chapter) is used. Then the sentence holds
+;; each capture delimited by leading name and trailing !.
 ;;
-;; If I get a reasonable fixup working as I work chapter
-;; 16 I'll add it here, but I want to do my best to keep
-;; the original code from the text intact.
+;;       (match '(*beg me *end) '(love me do) =>
+;;      '(beg love ! end do !)
+;;
+;; I added a 'match?' predicate that translates results
+;; to booleans, but have not added it here.
 
 (define (match pattern sent)
   (match-using-known-values pattern sent '()))

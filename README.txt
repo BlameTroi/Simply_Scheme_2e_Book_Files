@@ -1,10 +1,10 @@
-		     ===========================
-			     Supporting Files for
-			        Simply Scheme:
-		     Introducing Computer Science
-				        2/e
-			   Copyright (C) 1999 MIT
-		     ===========================
+     ===========================
+        Supporting Files for
+          Simply Scheme:
+     Introducing Computer Science
+                2/e
+       Copyright (C) 1999 MIT
+     ===========================
 
 These directories hold supporting files for the textbook...
 
@@ -21,7 +21,7 @@ I have tried to use this code with four Schemes: Guile, Chez, Racket,
 and Chicken. Only Chicken and Racket work and Racket provides their
 own version of "simply.scm" but not the other files.
 
-See "required.scm" for a more detailed discussion of the what, where,
+See "required.*" for a more detailed discussion of the what, where,
 why, and how of loading the environment.
 
 The text is still in copyright and still available to purchase, but
@@ -42,7 +42,7 @@ Simply_Scheme_2e_Book_Files
 ├── README.txt
 ├── database.scm
 ├── functions.scm
-├── match.scm      <---- does not work 
+├── match.scm       <-- see notes in file
 ├── newttt.scm
 ├── originals
 │   ├── database.scm
